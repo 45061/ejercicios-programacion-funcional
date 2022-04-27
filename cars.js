@@ -101,12 +101,16 @@ const cars =
     { brand: 'Ferrari', price: 9541, model: 1970 } 
 ];
 
+// 1. Create a function ferraris that returns all the cars of the Ferrari brand.
+
 const ferraris = (arrCar) => {
   return arrCar.filter(item => {
     return item.brand === 'Ferrari'
   })
 }
 console.log(ferraris(cars))
+
+// 2. Create a function nineties that returns all the cars with models between 1980 and 1990.
 
 const nineties = arrCar => {
   return arrCar.filter(item => {
@@ -115,6 +119,9 @@ const nineties = arrCar => {
 }
 console.log(nineties(cars))
 
+// 3. Create a function list that returns an array of strings with the same number of cars. Each element should contain the string 
+// “This from costs $” (e.g. for the first element it should say “This Mazda from 1989 costs $5241”).
+
 const list = arrCar => {
   return arrCar.map(item => {
     return `This ${item.brand} from ${item.model} costs $${item.price}`
@@ -122,13 +129,7 @@ const list = arrCar => {
 }
 console.log(list(cars))
 
-// const bmwSum = arrCar => {
-//   return arrCar.reduce((sum, item) => {
-//     if(item.brand === 'BMW') sum += item.price
-//     return sum
-//   }, 0)
-// }
-// console.log(bmwSum(cars)) // 114455
+// 4. Create a function bmwSum that returns the sum of all prices of the BMW cars.
 
 const bmwSum = arrCar => {
   return arrCar.filter(item => item.brand === 'BMW')
